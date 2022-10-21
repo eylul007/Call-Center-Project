@@ -1,0 +1,106 @@
+<div class="animated fadeIn"> 
+ 
+    <div class="row"> 
+      <div class="col-md-12 mt-3"> 
+        <div class="card"> 
+          <div class="card-header"> 
+            <strong>Çağrı Listesi</strong>&nbsp;
+            <button class="btn btn-success" (click)="cagriKaydaGit()">Yeni Çağrı Ekle</button>
+          </div> 
+          <div class="card-body">
+            <div class="row"> 
+              <div class="col-sm-12"> 
+                <table class="table table-responsive-sm table-hover table-outline mb-0"> 
+                  <thead class="thead-light"> 
+                    <tr> 
+                      <th class="text-center"></th> 
+                      <th>Çağrı ID</th> 
+                      <th class="text-center">Müşteri Adı</th> 
+                      <th class="text-center">Müşteri Soyadı</th> 
+                      <th class="text-center">Müşteri Tel No</th> 
+                      <th class="text-center">Müşteri E-Posta</th> 
+                      <th class="text-center">Sorun Başlığı</th>
+                      <th class="text-center">Sorun Açıklması</th> 
+                      <th class="text-center">Kayıt Tarihi</th> 
+                      <th class="text-center">Termin Tarihi</th> 
+                      <th class="text-center">Servis Tarihi</th> 
+                      <th class="text-center">Servis Ücreti</th> 
+                      <th class="text-center">Personel ID</th> 
+                      <th class="text-center">Ürün Grubu</th> 
+                    </tr> 
+                  </thead> 
+                  <tbody> 
+   
+                    <tr *ngFor="let item of kayitListe"> 
+                      <td class="text-center"> 
+                        <div class="avatar"> 
+                          <i class="icon-pencil"></i>
+                        </div> 
+                      </td> 
+                      <td> 
+                        <div>{{item.cagri_id}}</div>  
+                      </td> 
+   
+                      <td class="text-center"> 
+                        <div>{{item.musteri_ad}}</div> 
+                      </td> 
+   
+                      <td class="text-center"> 
+                        <div>{{item.musteri_soyad}}</div> 
+                      </td> 
+   
+                      <td class="text-center"> 
+                        <div>{{item.musteri_telNo}}</div> 
+                      </td>
+                      
+                      <td class="text-center"> 
+                        <div>{{item.musteri_email}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.sorun_basligi}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.sorun_aciklamasi}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.kayit_tarihi | date}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.termin_tarihi | date}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.servis_tarihi | date}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.servis_ucreti | currency: "TRY "}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.personel_id}}</div> 
+                      </td>
+
+                      <td class="text-center"> 
+                        <div>{{item.cihaz_ismi}}</div> 
+                      </td>
+                    </tr> 
+                  </tbody> 
+                </table> 
+              </div> 
+            </div> 
+            <!--/.row--> 
+   
+   
+          </div> 
+        </div> 
+      </div> 
+      <!--/.col--> 
+    </div> 
+    <!--/.row--> 
+  </div> 
+  
